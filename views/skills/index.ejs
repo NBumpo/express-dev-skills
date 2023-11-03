@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EXPRESS DEV SKILLS></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    
+  </head>
+  <body>
+    <a href="/">HOME</a>
+    <ul>
+        <% skills.forEach(function(s) { %>
+            <li>
+                <a href="/skills/<%= s.id %>"><%= s.skill %></a>
+                -
+                <%= s.skilled ? 'Skilled' : 'Not Skilled' %>
+            </li>
+      <%  }) %>
+    </ul>
+</body>
+</html>
